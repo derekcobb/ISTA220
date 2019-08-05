@@ -1,0 +1,78 @@
+##Name: CSSBS Homework Ch 8
+
+##Author: Derek Cobb
+
+##Date: July 24, 2019
+
+Read chapter 8, pages 183 - 207 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions in writing.
+
+--1. What is the difference between deep copy and shallow copy?
+(pg 185) Deep copy the *Clone* method copies a reference to the fields, while the shallow copy simply copies references.
+(https://www.c-sharpcorner.com/UploadFile/56fb14/shallow-copy-and-deep-copy-of-instance-using-C-Sharp/)
+SHALLOW COPY: A Shallow Copy is about copying an object's value type fields into the target object and the object's reference types are copied as references into the target object but not the referenced object itself. 
+It copies the types bit by bit. The result is that both instances are cloned and the original will refer to the same object.
+DEEP COPY: a deep copy occurs when an object is copied along with the objects to which it refers.
+
+--2. What is the value of a reference after you declare and initialize it?
+(pg 184) The value of a reference after it is declared and initialized is the address of the object.
+
+--3. How do you declare a value type?
+(pg 206-207/https://www.tutorialsteacher.com/csharp/csharp-value-type-and-reference-type) By assigning a value to a variable with an assigned data type, excluding string.
+
+--4. How do you declare a reference type?
+(https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types) Reference types are declared by using the data type string or keywords
+interface, class, or delegate. (Class) You use the *new* keyword.
+
+--5. Does C# allow you to assign NULL to a value type?
+(pg 191) null is itself a reference, so you cannot assign it to a value type.
+
+--6. Can you assign a nullable value type to a non-nullable variable of the same type? Why or why not?
+(pg 192) No. This is due to the variable expecting a definite value.You should note that the converse is not true. 
+You cannot assign a nullable variable to an ordinary
+value type variable. So, given the definitions of variables i and j from the preceding example, the fol-
+lowing statement is not allowed:
+j = i; // Illegal
+(Mr. Carter) A nullable value type cannot be assigned to a non-nullable variable of the same type because the compiler can't know what value is in null.
+
+--7. What is the diffrence between the stack and the heap?
+(pg 197) 
+STACK
+Method parameters and local variables on the stack have a well-defined lifespan: they come into
+existence when the method starts, and they disappear as soon as the method completes. (Mr. Carter) The stack holds the memory while the program executes.
+HEAP
+Objects created on the heap therefore have a
+more indeterminate lifespan; an object is created by using the new keyword, but it disappears
+only sometime after the last reference to the object is removed.
+
+--8. What does it mean when we say that all classes are specialized types?
+(pg 199) You can create classes that refer to any reference type. (Mr. Carter) It is the ultimate base class of all .NET classes; it is the root of the type hierarchy.
+
+--9. What does ref do?
+(pg 193) If you prefix a parameter with the ref keyword, the C# compiler generates code that passes a reference
+to the actual argument rather than a copy of the argument. When using a ref parameter, anything you
+do to the parameter you also do to the original argument because the parameter and the argument
+both reference the same data. When you pass an argument as a ref parameter, you must also prefi x
+the argument with the ref keyword.
+(Mr. Carter) 
+--10. What does out do?
+(pg 194) Similar to the *ref* keyword except the method must assign a value to it before it finishes or returns.
+(Mr. Carter) Allows you to return a value from a statement without using the *return* statement
+
+--11. Describe boxing and unboxing in your own words.
+(pg 200 - 201) BOXING - the runtime allocates a piece of
+memory from the heap, copies the value of integer i to this piece of memory, and then refers the object
+o to this copy. This automatic copying of an item from the stack to the heap is called boxing
+(Mr. Carter) Where memory from the stack is forced onto the heap. You will have a reference type that points to the value on the heap.
+
+UNBOXING - The compiler notices that you’ve specified the type int in the cast.
+Next, the compiler generates code to check what o actually refers to at runtime. It could be absolutely
+anything. Just because your cast says o refers to an int, that doesn’t mean it actually does. If o really
+does refer to a boxed int and everything matches, the cast succeeds, and the compiler-generated code
+extracts the value from the boxed int and copies it to i. (In this example, the boxed value is then stored
+in i. This is called unboxing.
+
+--12. What does cast do?
+(pg 201) cast. This is an operation
+that checks whether converting an item of one type to another is safe before actually making the copy.

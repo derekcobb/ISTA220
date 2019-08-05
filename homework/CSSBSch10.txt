@@ -1,0 +1,66 @@
+--Name: C#SBS Homework Ch10
+
+--Author: Derek Cobb
+
+--Date: July 31, 2019
+
+-------------------------------------------------------------
+Read chapter 10, pages 229 - 252 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions in writing.
+
+--1. What does an array look like in memory?
+(https://blog.submain.com/c-array/) An array looks like a an ordered stack/list of values with
+the same data type;
+(pg 229)(A contiguous block of memory)
+
+--2. Where is memory allocated to hold an array, on the stack or on the heap?
+(pg 230) On the heap, memory is allocated to hold an array.
+
+--3. Where is memory allocated to hold an array reference, on the stack or on the heap?
+(Me) Memory is allocated to hold an array reference on the stack.
+
+--4. Can an array hold values of different types? This is a trick question, the answer is, \It depends."
+Maybe?
+(Cherif/class) No, 
+
+--5. Describe the syntax of the condition or a foreach loop.
+(https://www.geeksforgeeks.org/c-sharp-foreach-loop/)
+
+foreach(data_type (iteration)var_name in collection_variable)
+{
+     // statements to be executed
+}
+
+--6. How do you make a deep copy of a array?
+(https://docs.microsoft.com/en-us/dotnet/api/system.array.clone?view=netframework-4.8 ) Copy the elements and everything directly and indirectly referenced by those elements
+
+
+--7. What is the difference between a multi-dimensional array and an array of arrays?
+https://stackoverflow.com/questions/597720/what-are-the-differences-between-a-multidimensional-array-and-an-array-of-arrays
+Array of arrays (jagged arrays) are faster than multi-dimensional arrays and can be used more effectively. Multidimensional arrays have nicer syntax.
+
+--8. How do you "flatten" a multidimensional array? In other words, take something that looks like a
+matrix
+
+
+1 2 3
+4 5 6
+7 8 9
+
+5 and turn it into an array [1, 2, 3, 4, 5, 6, 7, 8, 9]?
+
+(https://stackoverflow.com/questions/32588070/flatten-jagged-array-in-c-sharp/32588089)
+
+You can use SelectMany
+
+var flat = my2dArray.SelectMany(a => a).ToArray();
+This will work with a jagged array like in your example, but not with a 2D array like
+
+var my2dArray = new [,] { { 1, 2, 3 }, { 1, 2, 3 } };
+But in that case you can iterate the values like this
+
+foreach(var item in my2dArray)
+    Console.WriteLine(item);
+
+(Mr. Carter) Flat [i*3+j] = a[i,j];

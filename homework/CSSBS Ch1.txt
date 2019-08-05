@@ -1,0 +1,33 @@
+--Name: C#SBS Ch.1
+-- Author: Derek Cobb
+-- Date: July 3, 2019
+-- Purpose: Homework
+1. What is a console app? (Pg 3 “Note”)
+A console application is an application that runs in a Command Prompt window instead of providing a graphical user interface (GUI).
+
+2. What does Main() (the main method) do in a console application? (pg 8 para 5)
+	The Main() method designates the program’s entry point/starting point
+
+3. What is the purpose of a namespace? (pg 15 para 3)
+Namespaces help solve the problem of programmers having to read incomprehensibly long names by creating a container for items, such as classes. It is an organizational tool.
+
+4. Describe specifically what using statements do. (pg 18 para1 )
+Using statements implement the user interface that has been designed. Designates what you are referring to.
+
+5. What is an assembly? (pg 17 para 1)
+An assembly is a file that usually has the .dll file name extension, although strictly speaking, executable programs with the .exe file name extension are also assemblies.
+
+6. What is the relationship between an assembly and a namespace? (pg 17 para 4)
+A single assembly can contain classes in many namespaces, and a single namespace can span multiple assemblies. There is no relationship between assemblies and namespaces. They are two different things.
+
+7. What is a graphical app? (Me/internet)
+A GUI is an interface that uses icons, menus, and other visual indicators. User interacts with the objects on screen.
+
+8. What is the starting point in a graphical application? (Me)
+	The File menu. App.zamal is the entry point.
+
+9. What does Build do? (pg 11, last para)
+Build compiles C# code, resulting in a program than can be ran. It take human readable code and converts to binary code.
+
+10. What does Debug do? (Internet)
+	Debug tracks down errors in your program.

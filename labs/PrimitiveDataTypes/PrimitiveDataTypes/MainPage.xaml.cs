@@ -61,8 +61,9 @@ namespace PrimitiveDataTypes
 
         private void showIntValue()
         {
-            int intVar = 42;
-            value.Text = intVar.ToString() ;
+            int intVar;
+            intVar = 42;
+            value.Text = intVar.ToString();
         }
 
         private void showLongValue()
@@ -110,7 +111,7 @@ namespace PrimitiveDataTypes
         private void showBoolValue()
         {
             bool boolVar;
-            boolVar = true;
+            boolVar = false;
             value.Text = boolVar.ToString();
         }
     }

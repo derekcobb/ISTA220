@@ -1,0 +1,39 @@
+--Name: Homework Ch05 C#SBS
+
+--Author: Derek Cobb
+
+--Date: July 17, 2019
+
+----------------------------------------------------------------------------------------------------------
+
+Read chapter 6, pages 127 { 150 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions for chapter 6 in writing.
+--1. What is an exception?
+(133) A way for the programming language to signal that an error has occurred.
+
+--2. What happens in a try block if the program executes without errors?
+(134) When the code runs, it attempts to execute all the statements in the try block, and if none of the statements generates an
+exception, they all run, one after the other, to completion. 
+
+--3. How does the catch mechanism work for unhandled exceptions?
+(pg 135) If, after cascading back through the list of calling methods, the runtime is unable to fi nd a matching catch handler, the program will terminate with an unhandled exception.
+
+--4. What happens in a program if an exception block fails to handle a particular error?
+(pg 139) The application terminates
+
+--5. What is the parent class for all exceptions? How does this work?
+(internet) System.SystemException class is the base/parent class of all exceptions. Many of the common exceptions are derived from the parent/base class exception though it is not every single one.
+
+--6. How do you determine the type of an error?
+
+--7. What is the purpose of integer checking?
+(pg 145) A checked statement is a block preceded by the checked keyword. All integer arithmetic in a checked
+statement always throws an Overfl owException if an integer calculation in the block overfl ows
+
+--8. What does the finally block do?
+(pg 154-155) The way to ensure that a statement is always run, whether or not an exception has been thrown,
+is to write that statement inside a finally block. 
+A finally block occurs immediately after a try block or
+immediately after the last catch handler after a try block. As long as the program enters the try block
+associated with a fi nally block, the fi nally block will always be run, even if an exception occurs.

@@ -1,0 +1,86 @@
+Name: C#SBS Homework Ch 7
+
+Author: Derek Cobb
+
+Date: July 22, 2019
+
+Read chapter 7, pages 153 – 174 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions in writing.
+
+--1. What is a class? According to the book, what does a class “arrange?”
+(pg 159) A class is a block of code that arranges information and behavior into a meaningful entity. (Class0(A class is a group of things that contains methods and procedures)
+
+--2. What are the two purposes of encapsulatiohn?
+(pg 160) encapsulation is sometimes referred to as information hiding. Encapsulation actually has two purposes:
+--a. To combine methods and data within a class; in other words, to support classification (Mr. Carter) Group everything together in a confined space
+--b. To control the accessibility of the methods and data; in other words, to control the use of the class (Mr. Carter) To protect code within
+
+--3. How do you instantiate an instance of a class? How do you access that instance?
+(pg 161/http://www.informit.com/articles/article.aspx?p=2438407) C# uses the *new* keyword to instantiate/initalize an instance/object. You access the instance by invoking the object's name in a method.
+(class) How to access that instance through the pointer/reference
+
+--4. What is the default access of the fields and methods of a class? How do you change the default?
+(pg 162) Private is the default access of the fields and methods of a class. To change the default put *public* in place of *private*. (class) Alternating with a constructor.
+
+--5. What is the syntax for writing a constructor?
+(pg 164) You can write your own default constructor quite easily. Just add a public method that does
+not return a value and give it the same name as the class. The following example shows the Circle class
+with a default constructor that initializes the radius field to 0:
+class Circle
+{
+private int radius;
+public *Circle()* // *default constructor*
+{
+radius = 0;
+}
+public double Area()
+{
+return Math.PI * radius * radius;
+}
+}
+
+(Mr. Carter) A method that has the same name as the class and no return type is the *constructor*.
+
+--6. What is the difference between class fields and methods, and instance fields and methods? How do you
+create class fields and methods?
+
+(Mr. Carter) Instance fields and methods accessed through the objects you create. class fields and methods accessed through the class.
+(Class) The difference is that the instance field and methods is accesed through 
+
+
+--7. How do you bring a static class in scope? Why would you want to bring a static class in scope?
+(pg 176) Whenever you call a static method or reference a static field, you must specify the class to which the
+method or field belongs, such as Math.Sqrt or Console.WriteLine. *Static using statements* enable you to
+bring a class into scope and omit the class name when accessing static members. They operate in much
+the same way as ordinary using statements that bring namespaces into scope.
+
+--8. Can you think of a good reason to create an anonymous class? What is it?
+(pg 179) An anonymous class is a class that does not have a name. One good reason to create an anonymous class is if you run out of senisble names for the classes. An anonymous class can be used in place of the same name.
+(Mr. Carter) to avoid thinking of a name for it. You won't need to create a name for all of the thousands of objects you will make when coding.
+
+--9. What is polymorphism as this term is used in computer science? This is not in the book.
+(Internet) The word polymorphism means having many forms. Typically, polymorphism occurs when there is a hierarchy of classes and they are related by inheritance.
+(Mr. Carter) THe behavior of the method depends on the type of the parameter.
+
+10. What is message passing as this term is used in computer science? This is not in the book.
+(https://en.wikipedia.org/wiki/Message_passing) is a technique for invoking behavior (i.e., running a program) on a computer. 
+The invoking program sends a message to a process (which may be an actor or object) and relies on the process and the supporting infrastructure to select and invoke the actual code to run.
+(Mr. Carter) Classes talk to each other using message passing.
+
+--11. What was the first object-oriented programming language?
+(https://www.javatpoint.com/java-oops-concepts) Smalltalk/Similar 6 is considered the first object oriented programming language. Common-Lisp first ANSI certified programming language.
+
+12. Consider this quote by Alexander Stepanov:
+I find OOP technically unsound. It attempts to decompose the world in terms of interfaces
+that vary on a single type. To deal with the real problems you need multisorted algebras
+— families of interfaces that span multiple types. I find OOP philosophically unsound. It
+claims that everything is an object. Even if it is true it is not very interesting — saying that
+everything is an object is saying nothing at all.
+Who is Alexander Stephanov? What do you think about this quote?
+
+(https://en.wikipedia.org/wiki/Alexander_Stepanov ) Alexander Alexandrovich Stepanov, born November 16, 1950 in Moscow, is a Russian computer programmer, best known as an advocate of generic programming 
+and as the primary designer and implementer of the C++ Standard Template Library, which he started to develop around 1992 while employed at HP Labs.
+
+While Alexander does not like it I see it as a way to clearly explain things in a way that a computer program can execute. Ultimately, code is written to have
+a computer program execute that cannot think like a human, yet.

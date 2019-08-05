@@ -1,0 +1,72 @@
+--Name: C#SBS Homework Ch09
+
+--Author: Derek Cobb
+
+--Date: July 30, 2019
+
+-------------------------------------------------------------
+Read chapter 9, pages 209 - 227 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions in writing.
+
+--1. Declare an enum for military ranks, either offcer or enlisted. Name it Ranks. What are the symbols,
+like Private, PFC, Corporal, or 1stLt, 2ndLt, Capt?
+
+(pg 210) enum Ranks {2LT, 1LT, CPT, MAJ, LTC, COL, BG, MG, LTG, GEN}
+
+--2. Using the Ranks enum, assign a rank to yourself or a friend.
+(pg 210) 
+enum Ranks {1LT, 2LT, CPT, MAJ, LTC, COL, BG, MG, LTG, GEN}
+class example
+{
+	public void Method Ranks parameter) // method parameter example
+	{
+		Ranks localVariable; //local variable example
+		...
+	}
+	
+	private Ranks currentRank; //field example
+}
+Ranks Cobb = Ranks.CPT;
+Console.WriteLine(Cobb); // writes out 'CPT'
+
+--3. Determine the numeric index of particular ranks, using the Ranks enum.
+(pg 211) 
+enum Ranks {2LT, 1LT, CPT, MAJ, LTC, COL, BG, MG, LTG, GEN}
+...
+(Class)
+String Cobb = Ranks.CPT;
+Ranks Cobb = Ranks.CPT;
+Console.WriteLine ((int)Cobb); //writes out '3'
+
+--4. How do you select the type of an enum?
+(pg 212) When you declare an enumeration, the enumeration literals are given values of type int. You can also choose to base your enumeration on a different underlying integer type. For example, to declare that
+the underlying type for Season is a short rather than an int, you can write this:
+enum Season : short { Spring, Summer, Fall, Winter }
+
+
+--5. Are structs stored on the stack or on the heap? What about enums?
+(Class/pg 214) Structs are stored on the stack if they are local but can be stored on heap if there is  a list.
+Enums can be stored on the stack or the heap.
+
+--6. Declare a struct named DOD with four branches.
+(pg 216) 
+struct DOD  ------(Mr. Carter) "DOD" is a type that we created
+{
+	private string Army, Navy, MarineCorps, AirForce
+	
+}
+
+--7. Why can't you create a default constructor for a struct?
+(pg 217) The reason you can’t declare your own default constructor for a structure is that the compiler
+always generates one.
+
+
+--8. What is CIL? What does the CLR do to the CIL?
+(pg 226) The CIL (Common Intermediate Language) is a pseudo-machine code (it's byte code), which are the instructions that are stored in an assembly
+When you run a C# application, the CLR takes responsibility for converting the CIL instructions into
+real machine instructions that the processor on your computer can understand and execute.
+
+JVM - Java Virtual Machine
+
+

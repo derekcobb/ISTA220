@@ -1,0 +1,52 @@
+﻿--Name: Homework Ch05 C#SBS
+
+--Author: Derek Cobb
+
+--Date: July 16, 2019
+
+Read chapter 5, pages 107 – 125 in the C# Step by Step book.
+1.2 Discussion Questions
+Answer the discussion questions in writing.
+
+--1. What is a compound assignment operator? How does it work?
+(pg 116) A compound assignment operator is short hand for adding a value to a variable. The value on the left of the assignment operator has the arithmetic operator act on it by the value that is to the right of the
+compound assignment operator
+(class)
+int num = 10;
+num % = 3;
+What is num? num is 1.
+
+--2. List all the compound assignment operators.
+
+(pg 116) *=, /=, %=, +=, -=
+
+--3. List two ways to increment a numeric variable by 5. List two ways to decrement a numeric variable by
+50.
+(self) var += 5 or variable = variable + 5; var = -= 50 or variable = variable - 50
+
+--4. How long does a while loop run?
+(pg 117) for as long as a condition is true i.e., when a condition evaluates to false
+
+--5. What happens if you don’t change the loop variable in the body of the while loop block?
+(pg 118) This code iterates forever, displaying an infinite number of zeros, because only the Console
+WriteLine statement—and not the i++; statement—is executed as part of the while construct.
+
+(Mr. Carter)
+While (true)
+{ listen();
+
+--6. How many parts does a for loop statement have? Can you omit any of them? Can you omit all of
+them? What happens if you omit all of them?
+(pg 122) A for loop possesses three parts. Yes. Yes. The loop goes on forever.
+
+(Mr. Carter) Initiatlizer, terminal expression, update control variable
+
+--7. How do you guarantee that a loop runs at least once?
+(pg 124) By using a "do" statement
+
+--8. What does the break statement do?
+(pg 124) use the break statement to jump out of a switch statement. You can
+also use a break statement to jump out of the body of an iteration statement.
+
+--9. What does the continue statement do?
+(pg 124)In contrast, the continue statement causes the program to perform the next iteration of the loop immediately (after reevaluating the Boolean expression).

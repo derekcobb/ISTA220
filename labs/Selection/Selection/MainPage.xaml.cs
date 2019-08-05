@@ -50,19 +50,33 @@ namespace Selection
         {
             int result = 0;
             if (leftHandSide.Year < rightHandSide.Year)
-                result = -13;
-            else if (leftHandSide.Year > rightHandSide.Year)
-                result = 32;
-            else if (leftHandSide.Month < rightHandSide.Month)
-                result = -42;
-            else if (leftHandSide.Month > rightHandSide.Month)
-                result = 1986;
-            else if (leftHandSide.Day < rightHandSide.Day)
+            {
                 result = -1;
-            else if (leftHandSide.Day > rightHandSide.Day)
+            }
+            else if (leftHandSide.Year > rightHandSide.Year)
+            {
                 result = 1;
+            }
+            else if (leftHandSide.Month < rightHandSide.Month)
+            {
+                result = -1;
+            }
+            else if (leftHandSide.Month > rightHandSide.Month)
+            {
+                result = 1;
+            }
+            else if (leftHandSide.Day < rightHandSide.Day)
+            {
+                result = -1;
+            }
+            else if (leftHandSide.Day > rightHandSide.Day)
+            {
+                result = 1;
+            }
             else
+            {
                 result = 0;
+            }
             return result;
         }
     }

@@ -53,24 +53,10 @@ namespace Methods
                 }
                 else if (division.IsChecked.HasValue && division.IsChecked.Value)
                 {
-                    int division = 0;
-                    int remainder = 0;
+                    int division, remainder;
                     (division, remainder) = divide(leftHandSide, rightHandSide);
                     result.Text = $"{division} remainder {remainder}";
                 }
-                /*
-                else if (division.IsChecked.HasValue && division.IsChecked.Value)
-                {
-                    calculatedValue = divideValues(leftHandSide, rightHandSide);
-                    showResult(calculatedValue);
-                }
-      
-                else if (remainder.IsChecked.HasValue && remainder.IsChecked.Value)
-                {
-                    calculatedValue = remainderValues(leftHandSide, rightHandSide);
-                    showResult(calculatedValue);
-                }
-                */
             }
             catch (Exception caught)
             {
@@ -104,22 +90,7 @@ namespace Methods
             int remainder = leftHandSide % rightHandSide;
             return (division, remainder);
         }
-        /* Book instructs us to delete Mr. Carter recommends commenting code out
-        private int divideValues(int leftHandSide, int rightHandSide)
-        {
-            expression.Text = $"{leftHandSide} / {rightHandSide}";
-            return leftHandSide / rightHandSide;
-        }
-    
-        private int remainderValues(int leftHandSide, int rightHandSide)
-        {
-            expression.Text = $"{leftHandSide} % {rightHandSide}";
-            return leftHandSide % rightHandSide;
-        }
-        */
-        private void showResult(int answer)
-        {
-            result.Text = answer.ToString();
-        }
+
+        private void showResult(int answer) => result.Text = answer.ToString();
     }
 }
