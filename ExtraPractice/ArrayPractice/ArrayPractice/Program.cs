@@ -111,12 +111,64 @@ namespace ArrayPractice
                 array[i] = int.Parse(Console.ReadLine());
             }
              Copy elements of first array into second array.*/
-             /*
-            for(i=0; i<n; i++)
-            {
+            /*
+           for(i=0; i<n; i++)
+           {
 
+           }
+           */
+
+            //5.Write a program in C# Sharp to count a total number of duplicate elements in an array.
+
+            int s1, s2, mm = 1, ctr = 0, i, j;
+            int[] arr1 = new int[100];
+            int[] arr2 = new int[100];
+            int[] arr3 = new int[100];
+
+            Console.Write("\nCount the total number of duplicates in an array.");
+            Console.Write("---------------------------------------------------");
+
+            Console.Write("Input the number of elements to be stored in the array: ");
+            s1 = int.Parse(Console.ReadLine());
+
+            Console.Write("\nInput {0} elements into the array:\n");
+            for (i=0; i<s1; i++)
+            {
+                Console.Write("\nelement {0} | ", i);
+                arr1[i] = int.Parse(Console.ReadLine()); 
             }
-            */
+
+            //Copy in other array--------------------------------------------------------//
+
+            for (i = 0; i < s1; i++)
+            {
+                arr2[i] = arr1[i];
+                arr3[i] = 0;
+            }
+
+            //----------------------Mark the elements as duplicates-----------------------//
+            for (i=0; i<s1; i++)
+            {
+                for(j=0; j<s2; j++)
+                {
+                    if (arr1[i] == arr2[j])
+                    {
+                        arr3[j] == mm;
+                        mm++;
+                    }
+                }
+                mm = 1;
+            }
+
+            //-----------------------------Prints the array----------------------------------//
+
+            for (i =0; i<s1; i++)
+            {
+                if(arr3[i] == 2) { ctr++; }
+            }
+            Console.Write("\nThe number of duplicate elements is: {0} \n", ctr);
+
+            Console.Write("\n\n");
             
         }
     }
